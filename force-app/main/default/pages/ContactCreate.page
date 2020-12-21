@@ -1,0 +1,33 @@
+<apex:page controller="CreateContactController" sidebar="false">
+<apex:form >
+    <apex:pageMessages />
+        <apex:pageBlock title="Create Contact">    
+            <apex:pageBlockSection columns="2">
+    <apex:inputField value="{! con.FirstName }"/>   
+    <apex:inputField value="{! con.LastName }"/>   
+    <apex:inputField value="{! con.Title }"/>
+    <apex:inputField value="{! con.Tax_city__c }"/>
+    <apex:inputField value="{! con.Tax_country__c }"/>
+    <apex:inputField value="{! con.Email }"/>
+    <apex:inputField value="{! con.Birthdate }"/>
+    <apex:inputField value="{! con.Phone }"/>
+    <apex:inputField value="{! con.Description }"/>
+    <apex:inputField value="{! con.Fax }"/>
+    <apex:inputField value="{! con.Department }"/>
+    <apex:inputField value="{! con.MobilePhone }"/>
+	<apex:commandButton value="Save" action="{!save}"/>
+         </apex:pageBlockSection>
+        </apex:pageBlock>
+    
+   <apex:pageBlock title="Contacts List" id="contacts_list">
+   <apex:pageBlockTable value="{! contacts}" var="ct">
+      <apex:column value="{!ct.FirstName}"/>
+      <apex:column value="{!ct.LastName}"/>
+      <apex:column value="{!ct.Title}"/>
+      <apex:column value="{!ct.Email}"/>
+      <apex:column value="{!ct.Tax_country__c }"/>
+   </apex:pageBlockTable>
+</apex:pageBlock>
+    
+</apex:form>
+</apex:page>
