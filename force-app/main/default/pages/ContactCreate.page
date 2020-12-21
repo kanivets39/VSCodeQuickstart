@@ -1,5 +1,6 @@
 <apex:page controller="CreateContactController" sidebar="false">
 <apex:form >
+    <apex:stylesheet value="{!$Resource.CssExample}"/>
     <apex:pageMessages />
         <apex:pageBlock title="Create Contact">    
             <apex:pageBlockSection columns="2">
@@ -18,7 +19,7 @@
 	<apex:commandButton value="Save" action="{!save}"/>
          </apex:pageBlockSection>
         </apex:pageBlock>
-    
+      
    <apex:pageBlock title="Contacts List" id="contacts_list">
    <apex:pageBlockTable value="{! contacts}" var="ct">
       <apex:column value="{!ct.FirstName}"/>

@@ -1,5 +1,6 @@
 <apex:page standardController="Contact" sidebar="false">
 <apex:form >
+    <apex:stylesheet value="{!$Resource.CssExample}"/>
     <apex:pageBlock title="Contact">
 
 <apex:pageBlockSection columns="2">
